@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Nationalize.io</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="api.js"></script>
     <title>Document</title>
 </head>
-<body>
-    <div class="header">
-        <h1>Nationalize.io</h1>
-        <p>Predict the nationality of a name</p>
-    </div>
-    
-    <div class="content" id="myDIV">
-        <p>Nationalize.io predicts the nationality of a person given their name. Use the API for analytics, ad segmenting,
-        demographic statistics etc. Be sure to check out our use cases as well.</p>
-    <form action="#" id="form" onsubmit="return false">
-        <ul id="list">
-            <li>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="user_name">
-            </li>
-            <li class="button">
-                <button type="submit" onclick=setData()>Discover your name</button>
-            </li>
-        </ul>
-        <ul id="result">
 
-        </ul>
-    </form>
+<body>
+    <div class="container">
+        <div class="jumbotron"">
+            <h1>Nationalize.io</h1>
+            <p>Predict the nationality of a name</p>
+        </div>
+        
+        <div class=" form-group" id="myDIV">
+            <form action="#" id="form" onsubmit="return false">
+                <div id="list">
+                    <label for="name">Name:</label>
+                    <input class="form-control" type="text" id="name" placeholder="Dayne">
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-primary" type="submit" onclick=validateForm()>Discover your name</button>
+                    </div>
+                </div>
+                <ul id="result" class="list-group">
+
+                </ul>
+            </form>
+        </div>
     </div>
 </body>
+
 </html>

@@ -1,8 +1,10 @@
 function validateForm() {
   let x = document.forms["form"]["name"].value;
   if (x == "") {
-    alert("Name must be filled out");
+    alert("Insert a name");
     return false;
+  }else{
+      setData()
   }
 }
 
@@ -16,9 +18,10 @@ async function setData() {
     data = await getDataOfNationalize(document.forms["form"]["name"].value);
     data.forEach(async element => {
         country_name = await getDataOfCountry(element.country_id)
-        var para = document.createElement("li");
-        para.innerHTML = country_name;
-        document.getElementById("result").appendChild(para);  
+        var new_element = document.createElement("li");
+        new_element.innerHTML = country_name;
+        document.getElementById("result").appendChild(new_element);
+        new_element.classList.add("list-group-item");  
     });
 }
 
