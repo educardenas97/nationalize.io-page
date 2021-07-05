@@ -4,7 +4,7 @@ function validateForm() {
     alert("Insert a name");
     return false;
   }else{
-      setData()
+      setData();
   }
 }
 
